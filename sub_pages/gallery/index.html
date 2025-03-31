@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -33,47 +38,57 @@
         <!-- Main -->
         <div id="main">
             <section id="photography-sections" class="tiles">
-                <article>
+                <article class="clickable" data-url="sub_pages/Singleimages/index.html">
                     <span class="image">
                         <img src="images/landscape.jpg" alt="Single Images" />
                     </span>
                     <header class="major">
-                        <h3><a href="sub_pages/Singleimages/index.html" class="tile-link">Single Images</a></h3>
+                        <h3>Single Images</h3>
                         <p>A Fragment of Forever</p>
                     </header>
                 </article>
 
-                <article>
+                <article class="clickable" data-url="sub_pages/Photo Story/index.html">
                     <span class="image">
                         <img src="images/portrait.jpg" alt="Photo Story" />
                     </span>
                     <header class="major">
-                        <h3><a href="sub_pages/Photo Story/index.html" class="link">Photo Story</a></h3>
+                        <h3>Photo Story</h3>
                         <p>Chronicles Through the Lens</p>
                     </header>
                 </article>
 
-                <article>
+                <article class="clickable" data-url="sub_pages/Motion & Memory/index.html">
                     <span class="image">
                         <img src="images/landscape.jpg" alt="Motion & Memory" />
                     </span>
                     <header class="major">
-                        <h3><a href="sub_pages/Motion & Memory/index.html" class="tile-link">Motion & Memory</a></h3>
+                        <h3>Motion & Memory</h3>
                         <p>A Fragment of Forever</p>
                     </header>
                 </article>
 
-                <article>
+                <article class="clickable" data-url="sub_pages/travel/index.html">
                     <span class="image">
                         <img src="images/portrait.jpg" alt="Travelogue" />
                     </span>
                     <header class="major">
-                        <h3><a href="sub_pages/travel/index.html" class="tile-link">Travelogue</a></h3>
-                        <p>Stories from the Roads Less Traveled </p>
+                        <h3>Travelogue</h3>
+                        <p>Stories from the Roads Less Traveled</p>
                     </header>
                 </article>
             </section>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".clickable").forEach(article => {
+                article.addEventListener("click", function() {
+                    window.location.href = this.getAttribute("data-url");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
