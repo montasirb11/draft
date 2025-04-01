@@ -2629,5 +2629,113 @@ input, select, textarea {
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
-
+				@media screen and (max-width: 900px) {
+					#header {
+						width: 100%;
+						height: auto;
+						position: relative;
+						text-align: center;
+						padding: 15px;
+					}
+				
+					#header .top {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding: 0 15px;
+					}
+				
+					.sidebar-text {
+						text-align: center;
+						font-size: 14px;
+						line-height: 1.6;
+						padding: 10px 15px;
+						max-width: 100%;
+						word-wrap: break-word;
+						white-space: normal;
+					}
+				}
+				
+				
 	}
+	@media screen and (max-width: 768px) { 
+		#header {
+			width: 100%;
+			height: auto;
+			position: relative;
+			text-align: center;
+			padding: 20px;
+		}
+	
+		#header .top {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+		}
+	
+		/* Move text to top center */
+		.sidebar-text {
+			font-size: 16px;
+			line-height: 1.5;
+			padding: 20px;
+			max-width: 90%;
+			word-wrap: break-word;
+			white-space: normal;
+			text-align: center;
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+	
+		/* Hide text in sidebar for mobile */
+		#header .top .sidebar-text {
+			display: none;
+		}
+	
+		/* Show text at the top in mobile */
+		.mobile-sidebar-text {
+			display: block;
+		}
+	}
+	@media screen and (max-width: 768px) { 
+		/* Sidebar */
+		#header {
+			width: 100%; /* Make sidebar take full width */
+			height: auto; /* Adjust height to fit content */
+			position: relative;
+			padding: 20px;
+		}
+	
+		#header .top {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 0; /* Remove unnecessary padding */
+		}
+	
+		/* Sidebar Text */
+		.sidebar-text {
+			font-size: 16px; /* Adjust text size */
+			line-height: 1.5;
+			padding: 15px;
+			margin: 0 auto; /* Center the text */
+			width: 100%;
+			max-width: 100%; /* Make sure text doesn't go out of bounds */
+			text-align: center; /* Center align text */
+			word-wrap: break-word; /* Ensure long words wrap correctly */
+		}
+	}
+	@media screen and (max-width: 768px) {
+		#main {
+			margin-left: 0; /* Remove left margin */
+			padding: 20px;  /* Adjust padding for mobile */
+		}
+	}
+		
+	

@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Travelogue</title>
     <meta charset="utf-8" />
@@ -31,7 +32,7 @@
             cursor: pointer;
         }
 
-        /* Remove Sidebar Scroll and Align Text */
+        /* Sidebar Styling */
         #header {
             position: fixed;
             top: 0;
@@ -44,14 +45,14 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            padding-bottom: 20px; /* Ensure bottom padding */
+            padding-bottom: 20px;
         }
 
         #header .top {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 10px; /* Adjusted padding */
+            padding: 0 10px;
             flex-grow: 1;
             justify-content: flex-start;
         }
@@ -108,6 +109,58 @@
             padding: 20px;
         }
 
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .col-4 {
+            flex: 1;
+            min-width: 300px;
+            max-width: 33%;
+        }
+
+        .col-12-mobile {
+            max-width: 100%;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .image.fit img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 900px) {
+            #header {
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+
+            #main {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            .col-4 {
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .col-4 {
+                max-width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body class="is-preload">
@@ -121,15 +174,19 @@
             </div>
             <nav id="nav">
                 <ul>
-                
+                    <!-- Navigation links can be added here -->
                 </ul>
             </nav>
-            <div class="sidebar-text">
-                <p>The world is vast, and within its endless landscapes lies an abundance of stories waiting to be told. Travelling is about diving into the stories, and lives of others.  My journey is a quest not only to explore but to capture the essence of the cultures, traditions, and emotions that define the places and people I encounter. Every photo is a window into a world you might never have visited, yet one that is part of the collective experience we share. Welcome to my travelogue ..
-					.</p>
+            <div class="sidebar-text mobile-sidebar-text">
+                <p>The world is vast, and within its endless landscapes lies an abundance of stories waiting to be told. 
+                Traveling is about diving into the stories, and lives of others. My journey is a quest not only to explore 
+                but to capture the essence of the cultures, traditions, and emotions that define the places and people I encounter. 
+                Every photo is a window into a world you might never have visited, yet one that is part of the collective experience 
+                we share. Welcome to my travelogue ..</p>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Main -->
     <div id="main">
@@ -355,6 +412,7 @@
             document.getElementById('imageModal').style.display = 'none';
         }
     </script>
+
 
 </body>
 </html>
