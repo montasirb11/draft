@@ -2057,6 +2057,7 @@ input, select, textarea {
 		top: 0;
 		width: 375px;
 	}
+	
 
 		#header .top {
 			-moz-flex-grow: 1;
@@ -2701,41 +2702,5 @@ input, select, textarea {
 			display: block;
 		}
 	}
-	@media screen and (max-width: 768px) { 
-		/* Sidebar */
-		#header {
-			width: 100%; /* Make sidebar take full width */
-			height: auto; /* Adjust height to fit content */
-			position: relative;
-			padding: 20px;
-		}
 	
-		#header .top {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			padding: 0; /* Remove unnecessary padding */
-		}
-	
-		/* Sidebar Text */
-		.sidebar-text {
-			font-size: 16px; /* Adjust text size */
-			line-height: 1.5;
-			padding: 15px;
-			margin: 0 auto; /* Center the text */
-			width: 100%;
-			max-width: 100%; /* Make sure text doesn't go out of bounds */
-			text-align: center; /* Center align text */
-			word-wrap: break-word; /* Ensure long words wrap correctly */
-		}
-	}
-	@media screen and (max-width: 768px) {
-		#main {
-			margin-left: 0; /* Remove left margin */
-			padding: 20px;  /* Adjust padding for mobile */
-		}
-	}
-		
 	
