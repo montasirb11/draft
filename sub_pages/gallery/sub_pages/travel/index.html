@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Travelogue</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        <head>
     <title>Travelogue</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         /* Modal Styles */
@@ -110,7 +104,6 @@
         }
 
         /* Main Content */
-        
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -137,27 +130,21 @@
             height: auto;
             border-radius: 5px;
         }
+
         @media screen and (max-width: 768px) {
-    #header {
-        width: 100%;
-        position: relative;
-        text-align: center;
-        padding: 15px 0;
-    }
+            #header {
+                width: 100%;
+                position: relative;
+                text-align: center;
+                padding: 15px 0;
+            }
 
-   
-
-    .top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-    }
-
-
+            .top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
             .col-4 {
                 max-width: 50%;
@@ -169,65 +156,54 @@
                 max-width: 100%;
             }
         }
+
+        .intro-panel {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #2e2e2e, #4e4e4e);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.651);
+        }
+        .intro h2.major {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .intro-signature {
+            font-style: italic;
+            font-size: 1rem;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body class="is-preload">
-    <!-- Wrapper -->
-					<div id="wrapper">
+    <div id="wrapper">
+        <!-- Panel -->
+        <section class="panel intro-panel">
+            <div class="intro color2">
+                <h2 class="major">Welcome to My Travelogue</h2>
+                <p class="intro-text">
+                    The world is vast, and within its endless landscapes lies an abundance of stories waiting to be told.
+                    Traveling is about diving into the stories and lives of others. My journey is a quest not only to explore
+                    but to capture the essence of the cultures, traditions, and emotions that define the places and people I encounter.
+                </p>
+                <p class="intro-text">
+                    Every photo is a window into a world you might never have visited, yet one that is part of the collective experience
+                    we share. Through these images, I invite you to witness breathtaking moments, untold stories, and the beauty that unites us all.
+                </p>
+                <p class="intro-signature">- MB</p>
+            </div>
+        </section>
 
-						
-
-
-						
-						<!-- Panel -->
-                        <section class="panel intro-panel">
-                            <div class="intro color2">
-                                <h2 class="major">Welcome to My Travelogue</h2>
-                                <p class="intro-text">
-                                    The world is vast, and within its endless landscapes lies an abundance of stories waiting to be told. 
-                                    Traveling is about diving into the stories and lives of others. My journey is a quest not only to explore 
-                                    but to capture the essence of the cultures, traditions, and emotions that define the places and people I encounter. 
-                                </p>
-                                <p class="intro-text">
-                                    Every photo is a window into a world you might never have visited, yet one that is part of the collective experience 
-                                    we share. Through these images, I invite you to witness breathtaking moments, untold stories, and the beauty that unites us all. 
-                                </p>
-                                <p class="intro-signature">- MB</p>
-                            </div>
-                        </section>
-                        
-                        <style>
-                            .intro-panel {
-                                text-align: center;
-                                padding: 50px 20px;
-                                background: linear-gradient(135deg, #2e2e2e, #4e4e4e);
-                                color: white;
-                                border-radius: 10px;
-                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-                            }
-                            .intro h2.major {
-                                font-size: 2.5rem;
-                                font-weight: bold;
-                                margin-bottom: 20px;
-                            }
-                            .intro-text {
-                                font-size: 1.2rem;
-                                line-height: 1.6;
-                                margin-bottom: 15px;
-                            }
-                            .intro-signature {
-                                font-style: italic;
-                                font-size: 1rem;
-                                margin-top: 20px;
-                                opacity: 0.8;
-                            }
-                        </style>
-                        
-
-    
-
-    
-                <div class="row">
+        <!-- Gallery Section -->
+        <div class="row">
                     <div class="col-4 col-12-mobile">
                         <article class="item">
                             <a href="#" class="image fit" onclick="openModal('images/fulls/12.jpg')">
@@ -404,17 +380,17 @@
                             </a>
                         </article>
                         <article class="item">
-                            <a href="#" class="image fit" onclick="openModal('images/fulls/05.jpg')">
+                            <a href="#" class="image fit" onclick="openModal('images/fulls/04.jpg')">
                                 <img src="images/fulls/04.jpg" alt="" />
                             </a>
                         </article>
                         <article class="item">
-                            <a href="#" class="image fit" onclick="openModal('images/fulls/06.jpg')">
+                            <a href="#" class="image fit" onclick="openModal('images/fulls/05.jpg')">
                                 <img src="images/fulls/05.jpg" alt="" />
                             </a>
                         </article>
                         <article class="item">
-                            <a href="#" class="image fit" onclick="openModal('images/fulls/09.jpg')">
+                            <a href="#" class="image fit" onclick="openModal('images/fulls/10.jpg')">
                                 <img src="images/fulls/10.jpg" alt="" />
                             </a>
                         </article>
@@ -431,20 +407,21 @@
 
     <!-- Modal -->
     <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImg" />
     </div>
 
     <script>
-        function openModal(imageSrc) {
-            document.getElementById('imageModal').style.display = 'flex';
-            document.getElementById('modalImg').src = imageSrc;
+        function openModal(src) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "flex";
+            modalImg.src = src;
         }
+
         function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
+            document.getElementById("imageModal").style.display = "none";
         }
     </script>
-
-
 </body>
 </html>

@@ -1488,7 +1488,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-moz-transition: background-color 
 		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -2246,7 +2246,8 @@ input, select, textarea {
 				background-size: 128px 128px, auto;
 				background-color: #323459;
 			}
-
+            
+			
 		.panel > .intro {
 			padding: 3.5rem 3.5rem 2rem 3.5rem ;
 			display: -moz-flex;
@@ -2775,9 +2776,9 @@ input, select, textarea {
 		}
 
 			.panel > *.color1 {
-				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgb(0, 0, 0) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 				background-size: 128px 128px, auto;
-				background-color: #726193;
+				background-color: #111111;
 			}
 
 			.panel > *.color2 {
@@ -2801,7 +2802,7 @@ input, select, textarea {
 			.panel > *.color1-alt {
 				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
 				background-size: 128px 128px, auto;
-				background-color: #6c5e86;
+				background-color: #121213;
 			}
 
 			.panel > *.color2-alt {
@@ -3687,3 +3688,24 @@ input, select, textarea {
 			}
 
 	}
+	.image.filtered::before {
+		background: none !important;
+		display: none !important;
+	}
+	
+	.image.filtered img {
+		filter: none !important;
+		opacity: 1 !important;
+	}
+	.image.filtered::before {
+		display: none !important;
+		content: none !important;
+		background: none !important;
+	}
+	
+	.image.filtered {
+		filter: none !important;
+		opacity: 1 !important;
+		background: none !important;
+	}
+		

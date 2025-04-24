@@ -121,3 +121,43 @@
 				});
 
 })(jQuery);
+document.addEventListener("DOMContentLoaded", function () {
+	let scrollY = 0;
+
+	window.openModal = function (src) {
+		const modal = document.getElementById("myModal");
+		const modalImg = document.getElementById("modalImage");
+
+		// Save scroll position
+		scrollY = window.scrollY;
+
+		// Lock scroll
+		document.body.style.position = 'fixed';
+		document.body.style.top = `-${scrollY}px`;
+		document.body.style.left = '0';
+		document.body.style.right = '0';
+		document.body.style.overflow = 'hidden';
+		document.body.style.width = '100%';
+
+		// Show modal
+		modalImg.src = src;
+		modal.style.display = "flex";
+	};
+
+	window.closeModal = function () {
+		const modal = document.getElementById("myModal");
+
+		// Hide modal
+		modal.style.display = "none";
+
+		// Restore scroll
+		document.body.style.position = '';
+		document.body.style.top = '';
+		document.body.style.left = '';
+		document.body.style.right = '';
+		document.body.style.overflow = '';
+		document.body.style.width = '';
+
+		window.scrollTo(0, scrollY);
+	};
+});
